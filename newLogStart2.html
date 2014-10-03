@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logging System</title>
+        <link rel='stylesheet' href='jquery/customLogApp.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.structure-1.4.4.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.icons.min.css'>
+        <script type='text/javascript' src='jquery/jquery.min.js'></script>
+        <script type='text/javascript' src='jquery/jquery.mobile-1.4.4.min.js'></script>
+        <script type='text/javascript'>
+            
+        </script>
+        <style type="text/css">
+            #header
+            {
+                text-align:center;
+            }
+            #footer
+            {
+                position:fixed;
+                bottom:0;
+                width:100%;
+                font-size:12px;
+                text-align:center;
+            }
+            #content
+            {
+                width:90%;
+                margin-top:12.5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" data-theme="d">
+            <div id='header' class='ui-bar' data-role="header">
+                Create Log
+            </div>
+            <div id='content' data-role='content'>
+                <center><label style='margin-top:-5%;'>Please choose information as appropriate</label></center>
+                <hr>
+                    <div style='width:32%;'> <input type='text' id='referenceNumber' placeholder='Reference...'></div>
+                    <hr>
+                    <div>
+                        <div style='float:left;margin-top:2.5%;'><label>Status : </label></div>
+                        <div style='width:55%; margin-left:22.5%;'>
+                            <select data-mini='true'>
+                                <option>
+                                    Please Select
+                                </option>
+                                <option>
+                                    Open
+                                </option>
+                                <option>
+                                    Closed
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div style='float:left;margin-top:2.5%;'><label>Category : </label></div>
+                        <div style='width:55%; margin-left:29%;'>
+                            <select data-mini='true'>
+                                <option>
+                                    Please Select
+                                </option>
+                                <option>
+                                    A : High Severity
+                                </option>
+                                <option>
+                                    B : Medium Severity
+                                </option>
+                                <option>
+                                    C : Low Severity
+                                </option>
+                                <option>
+                                    D : Query
+                                </option>
+                                <option>
+                                    U : Awaiting Upgrade
+                                </option>
+                                <option>
+                                    X : Development
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                <hr>
+                <label></label>
+                <select data-mini='true'>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                </select>
+                <br>
+                <label></label>
+                <select data-mini='true'>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                    <option>
+                    </option>
+                </select>
+            </div>
+            <div data-role='footer' id='footer' class='ui-bar'><div style='margin-left:-6%;'>Drive Computer Services Ltd | All rights reserved &copy;</div></div>
+        </div>
+    </body>
+</html>

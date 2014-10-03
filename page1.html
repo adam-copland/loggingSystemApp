@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logging System</title>
+        <link rel='stylesheet' href='jquery/customLogApp.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.structure-1.4.4.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.icons.min.css'>
+        <script type='text/javascript' src='jquery/jquery.min.js'></script>
+        <script type='text/javascript' src='jquery/jquery.mobile-1.4.4.min.js'></script>
+        <script type='text/javascript'>
+            function createLog()
+            {
+                document.location.href="newLogStart1.html";
+            }
+        </script>
+        <style type="text/css">
+            #header
+            {
+                text-align:center;
+            }
+            #footer
+            {
+                position:fixed;
+                bottom:0;
+                width:100%;
+                font-size:12px;
+                text-align:center;
+            }
+            #content
+            {
+                margin-top:25%;
+            }
+            #newLogBtn
+            {
+                width:35%;
+                float:left;
+            }
+            #existLogBtn
+            {
+                width:35%;
+                float:right;
+            }
+            #backBtn
+            {
+                float:left;
+                margin-top:-35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" data-theme="d">
+            <div data-role="header" id='header' class='ui-bar'>
+                <div style='margin-top:15px;'>Log Enquiry</div>
+                <div id='backBtn'><input type='button' data-mini='true' data-icon='back' value='Back'></div>
+                
+            </div>
+            <div id='content' data-role='content'>
+                <a href='#' onClick='createLog();' data-role='button' data-mini='true' id='newLogBtn'>Create new</a>
+                <a href='#' onClick='loginClicked();' data-role='button' data-mini='true' id='existLogBtn'>Search existing</a>
+                <hr style='margin-top:25%;width:75%;'>
+                <center><div style='width:40%;margin-top:8%;'><input type='text' id='logNumberInput' placeholder='Log number...'></div></center>
+            </div>
+            <div data-role='footer' id='footer' class='ui-bar'><div style='margin-left:-6%;'>Drive Computer Services Ltd | All rights reserved &copy;</div></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logging System</title>
+    <link rel='stylesheet' href='jquery/customLogApp.min.css'>
+    <link rel='stylesheet' href='jquery/jquery.mobile.structure-1.4.4.min.css'>
+    <link rel='stylesheet' href='jquery/jquery.mobile.icons.min.css'>
+    <script type='text/javascript' src='jquery/jquery.min.js'></script>
+    <script type='text/javascript' src='jquery/jquery.mobile-1.4.4.min.js'></script>
+        <script type='text/javascript'>
+            function doLogin()
+            {
+                document.location.href='page1.html';
+                var userName = $('#userName').val();
+                var password = $('#password').val();
+                
+                $.ajax ({
+                            url:'http://www.support.drivecomputing.co.uk/w99a66qr_ajax.php',
+                            cache:false,
+                            data: {'request': 'validateSettings', 'userName' : userName, 'password' : password},
+                            dataType: 'json',
+                            success: function(data)
+                              {
+                                  alert('hello');
+                                  $('#errMsg').html(data.errMsg);
+                                  
+                                  if (data.errMsg == "")
+                                  {
+                                      alert('Login Successful!');
+                                  }
+                                  else
+                                  {
+                                      $('#errMsg').html(data.errMsg);
+                                  }
+                              }
+                            });
+            }
+        </script>
+        <style type="text/css">
+            #header
+            {
+                text-align:center;
+            }
+            #footer
+            {
+                position:fixed;
+                bottom:0;
+                width:100%;
+                font-size:12px;
+                text-align:center;
+            }
+            #label
+            {
+                text-align:center;
+                margin-top:150px;
+            }
+            #userName
+            {
+                text-align:center;
+            }
+            #password
+            {
+                text-align:center;
+            }
+            #loginBtn
+            {
+                width:40%;
+            }
+            #content
+            {
+                width:60%;
+                margin-top:-20%;
+            }
+        </style>
+</head>
+<body>
+    <div data-role="page" data-theme="d">
+            <div id='header' class='ui-bar' data-role="header">
+                Logging System
+            </div>
+        <br>
+        <br>
+        <center>
+            <div id='content' data-role='content'>
+                <div id='label'>Please enter the requested details</div>
+                <hr style='width:80%;'>
+                <center><input type='text' id='userName' placeholder='Username...'></center>
+                <center><input type='password' id='password' placeholder='Password...'></center>
+                <hr style='width:80%;'>
+                <center><a href='#' onClick='doLogin();' data-role='button' data-mini='true' id='loginBtn'>Login</a></center>
+            </div>
+        </center>
+        <div id="errMsg"></div>
+        <div data-role='footer' id='footer' class='ui-bar'><div style='margin-left:-6%;'>Drive Computer Services Ltd | All rights reserved &copy;</div></div>
+    </div>
+</body>
+</html>

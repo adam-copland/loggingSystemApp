@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logging System</title>
+        <link rel='stylesheet' href='jquery/customLogApp.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.structure-1.4.4.min.css'>
+        <link rel='stylesheet' href='jquery/jquery.mobile.icons.min.css'>
+        <script type='text/javascript' src='jquery/jquery.min.js'></script>
+        <script type='text/javascript' src='jquery/jquery.mobile-1.4.4.min.js'></script>
+        <script type='text/javascript'>
+            function createLog()
+            {
+                document.location.href="newLogStart2.html";
+            }
+        </script>
+        <style type="text/css">
+            #header
+            {
+                text-align:center;
+            }
+            #footer
+            {
+                position:fixed;
+                bottom:0;
+                width:100%;
+                font-size:12px;
+                text-align:center;
+            }
+            #content
+            {
+                width:60%;
+                margin-top:12.5%;
+            }
+            #createLogBtn
+            {
+                width:40%;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" data-theme="d">
+            <div id='header' class='ui-bar' data-role="header">
+                Create Log
+            </div>
+            
+            <center><div id='content' data-role='content'>
+                    <label style='margin-top:-8%;'>Please choose information as appropriate</label>
+                    <hr>
+                    <label>Customer Code</label>
+                    <select data-mini='true'>
+                        <option>
+                            Please Select
+                        </option>
+                        <option>
+                            01 : D & H
+                        </option>
+                        <option>
+                            02 : Macphie
+                        </option>
+                        <option>
+                            03 : Norsea
+                        </option>
+                        <option>
+                            04 : Kesslers
+                        </option>
+                        <option>
+                            05 : Lambsons
+                        </option>
+                    </select> 
+                    <br>
+                <hr>
+                <label>Select Product</label>
+                <select data-mini='true'>
+                    <option>
+                        Please Select
+                    </option>
+                    <option>
+                        Bliss
+                    </option>
+                    <option>
+                        Marpacs
+                    </option>
+                    <option>
+                        SAP Business One
+                    </option>
+                </select>
+                <br>
+                <label>Select Log Type</label>
+                <select data-mini='true'>
+                    <option>
+                        Please Select
+                    </option>
+                    <option>
+                        Customer Project
+                    </option>
+                    <option>
+                        Helpdesk Log
+                    </option>
+                    <option>
+                        Release Notes
+                    </option>
+                    <option>
+                        Site Log
+                    </option>
+                    <option>
+                        Other
+                    </option>
+                </select>
+                <hr>
+                <br>
+                <a href='#' onClick='createLog();' data-role='button' data-mini='true' id='createLogBtn'>Create Log</a>
+            </div>
+            </center>
+            <div data-role='footer' id='footer' class='ui-bar'><div style='margin-left:-6%;'>Drive Computer Services Ltd | All rights reserved &copy;</div></div>
+        </div>
+    </body>
+</html>
